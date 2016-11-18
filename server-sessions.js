@@ -19,17 +19,17 @@
 
     wsServer.on('request', function (request) {
         let url = request.resourceURL.pathname;
-        console.log('url', url)
+        console.log('url', url);
         var connection = request.accept(null, request.origin);
+
         console.log((new Date()) + ' Connection accepted.');
+
         if(typeof (pathnames[url])=='undefined')
             pathnames[url] = [];
         pathnames[url].push(connection);
 
         connection.on('message', function (msg) {
-            for (var i = 0; i < pathnames[url].length; i++) {
-                broadcast(msg.utf8Data, url);
-            }
+            broadcast(msg.utf8Data, url);
         });
     });
 

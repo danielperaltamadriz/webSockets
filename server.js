@@ -1,6 +1,5 @@
 (function() {
     'use strict'
-
     var webSocketsServerPort = 9002;
     var webSocketServer = require('websocket').server;
     var http = require('http');
@@ -23,9 +22,7 @@
         clients.push(connection);
 
         connection.on('message', function (msg) {
-            for (var i = 0; i < clients.length; i++) {
-                broadcast(msg.utf8Data);
-            }
+            broadcast(msg.utf8Data);
         });
     });
 

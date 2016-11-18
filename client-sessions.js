@@ -49,8 +49,6 @@ let vm = (()=> {
                 mouse.x = e.layerX;
                 mouse.y = e.layerY;
             }
-            //  mouse.x = e.pageX - rect.offsetLeft ;
-            // mouse.y = e.pageY - rect.offsetTop;
         }, false);
 
         function paintCanvas() {
