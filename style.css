@@ -1,4 +1,6 @@
 canvas{
+    margin-top: 3%;
     border: 10px solid #000000;;
     border-radius: 10%;
+    position:relative;
 }
