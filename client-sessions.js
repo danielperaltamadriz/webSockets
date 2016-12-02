@@ -3,7 +3,7 @@ let vm = (()=> {
     let connect = ()=> {
         let url = document.getElementById('url').value;
         console.log('url', url);
-        var connection = new WebSocket('ws://127.0.0.1:9002/'+url);
+        var connection = new WebSocket('ws://163.178.104.105:9002/'+url);
         var mouse = {x: 0, y: 0};
         var canvas = document.getElementById('drawing');
         var context = canvas.getContext('2d');
